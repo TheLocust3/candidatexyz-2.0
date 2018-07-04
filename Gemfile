@@ -26,3 +26,5 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'candidatexyz-common', :github => 'TheLocust3/candidatexyz-common', :branch => 'master'
