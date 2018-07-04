@@ -1,5 +1,7 @@
 #!/bin/bash
 
+NAME=candidatexyz
+BUCKET=candidatexyz-demo-$NAME
 RUBY_VERSION=2.5.0 # Need to also update service file with different ruby version
 
 set -e
@@ -22,13 +24,20 @@ export PATH=/home/ubuntu/.rbenv/versions/$RUBY_VERSION/bin:$PATH
 sudo npm install --global yarn
 gem install bundler
 
+sudo rm /etc/nginx/sites-available/default
+sudo cp /home/ubuntu/rails/deploy/nginx /etc/nginx/sites-available/default
+sudo systemctl restart nginx
+
 # setup server
 cd /home/ubuntu/rails
+
+sudo apt-get install -y awscli
+
+aws s3 cp s3://$BUCKET/common.tar.gz /home/ubuntu/rails/
+sudo tar -xvzf common.tar.gz
 
 # pull secrets
 export $(cat /home/ubuntu/secrets.env | xargs)
 
+bundle config --local local.candidatexyz-common /home/ubuntu/rails/common
 bundle install
-
-./bin/rake assets:clobber RAILS_ENV=production
-./bin/rake assets:precompile RAILS_ENV=production
