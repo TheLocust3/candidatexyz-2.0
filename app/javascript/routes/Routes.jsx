@@ -34,10 +34,11 @@ class Routes extends React.Component {
                     <Route component={ScrollToTop} />
 
                     <div className='content-root'>
-                        <Navbar />
                         <AdminOverlay />
 
                         <div className='content-wrapper'>
+                            <Navbar />
+                            
                             <Switch>
                                 <Route path='/staff' component={StaffRoutes} />
 

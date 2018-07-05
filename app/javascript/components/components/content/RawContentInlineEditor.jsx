@@ -41,7 +41,7 @@ class RawContentInlineEditor extends React.Component {
 
         return (
             <Form handleSubmit={(event) => this.handleSubmit(event)}>
-                <TextField label={this.props.content.identifier} onChange={(event) => this.handleContentChange(event)} defaultValue={content} size={100} />
+                <TextField label={this.props.content.identifier} onChange={(event) => this.handleContentChange(event)} defaultValue={content} size={50} />
 
                 <Button className='edit-raw-content-button'>Save</Button>
             </Form>

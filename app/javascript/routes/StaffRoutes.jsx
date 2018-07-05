@@ -6,6 +6,7 @@ import { StaffActions } from 'candidatexyz-common-js';
 
 import EditPost from '../components/containers/posts/EditPost';
 import CreatePost from '../components/containers/posts/CreatePost';
+import EditRawContent from '../components/containers/staff/EditRawContent';
 import Help from '../components/containers/staff/Help';
 
 class StaffRoutes extends React.Component {
@@ -23,6 +24,7 @@ class StaffRoutes extends React.Component {
                     <Route exact path='/staff/posts/:postType/:url/edit' component={EditPost} />
                     <Route exact path='/staff/posts/:postType/new' component={CreatePost} />
 
+                    <Route exact path='/staff/edit-content' component={EditRawContent} />
                     <Route exact path='/staff/help' component={Help} />
                 </Switch>
             </Route>
