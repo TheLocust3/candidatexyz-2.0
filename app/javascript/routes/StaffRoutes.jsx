@@ -2,7 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { StaffActions } from 'candidatexyz-common-js';
+import { UserActions } from 'candidatexyz-common-js';
+
+import { APP_DOMAIN } from '../constants';
+
+import RedirectExternal from './RedirectExternal';
 
 import EditPost from '../components/containers/posts/EditPost';
 import CreatePost from '../components/containers/posts/CreatePost';
@@ -12,11 +16,12 @@ import Help from '../components/containers/staff/Help';
 class StaffRoutes extends React.Component {
 
     componentWillMount() {
-        this.props.dispatch(StaffActions.fetchCurrentUser());
+        this.props.dispatch(UserActions.fetchCurrentUser());
     }
 
     render() {
-        if (_.isEmpty(this.props.user)) return null;
+        if (!this.props.isReady) return null;
+        if (_.isEmpty(this.props.user)) return <RedirectExternal to={APP_DOMAIN} />;
 
         return (
             <Route path='/staff'>
@@ -34,7 +39,8 @@ class StaffRoutes extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        user: state.staff.currentUser
+        isReady: state.users.isCurrentUserReady,
+        user: state.users.currentUser
     };
 }
 

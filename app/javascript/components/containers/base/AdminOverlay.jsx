@@ -142,8 +142,8 @@ class AdminOverlay extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        isReady: state.staff.isCurrentUserReady,
-        user: state.staff.currentUser,
+        isReady: state.users.isCurrentUserReady,
+        user: state.users.currentUser,
         edit: state.content.edit,
         contentHistory: state.content.contentHistory
     };

@@ -81,10 +81,7 @@ class Help extends React.Component {
 
                     <p id='slide5' className='middle'>
                         <b>Staff Options</b><br />
-                        Settings: Edit your personal user settings<br />
-                        Staff Management: Manage your staff. Invite staff, update permissions, etc<br />
-                        Volunteers: A list of volunteers who have signed up on your site<br />
-                        Sign Ups: A list of people who have signed up on your site. Used to send mass emails<br />
+                        Dashboard: Takes you to your candidateXYZ Campaign Management App<br />
                         Edit Other Content: Edit certain content that can't be edited anywhere else (calendars, website name)<br />
                     </p>
 
