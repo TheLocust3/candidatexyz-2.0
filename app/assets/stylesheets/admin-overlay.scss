@@ -1,0 +1,60 @@
+@import 'theme';
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.overlay-action-icon {
+    background-color: $purple-primary !important;
+}
+
+.overlay-actions-left {
+    position: fixed;
+    bottom: 1%;
+    left: 1%;
+    z-index: 9999;
+}
+
+.overlay-actions-left .overlay-action-icon {
+    margin-right: 1%;
+}
+
+.overlay-actions-right {
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    width: 125px;
+    z-index: 9999;
+
+    display: inline-block;
+    text-align: right;
+}
+
+.edit-content-wrapper {
+    position: absolute;
+    z-index: 9999;
+    padding: 1%;
+
+    background-color: white;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #BBB;
+}
+
+.edit-content-button {
+    float: right;
+    margin-top: 20%;
+}
+
+.slideshow-content-editor {
+    width: 40vw;
+}
+
+.menu-item-link {
+    text-decoration: none;
+    color: #212121; // TODO: Get a matching color
+}

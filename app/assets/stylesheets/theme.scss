@@ -1,0 +1,37 @@
+@import 'global';
+
+$mdc-theme-primary: #00427c;
+$mdc-theme-secondary: #00427c;
+
+.mdc-snackbar {
+    z-index: 9999;
+}
+
+.mdc-snackbar__action-button {
+    color: $purple-light;
+    font-weight: bold;
+}
+
+.mdc-list-item {
+    position: relative;
+    
+    cursor: initial;
+}
+
+.mdc-list-item:hover {
+    background-color: #f2f2f2
+}
+
+.mdc-list-item__meta:hover {
+    cursor: pointer;
+}
+
+.mdc-tab-bar-header {
+    overflow-x: scroll;
+}
+
+.mdc-toolbar__row {
+    height: 100%;
+}
+
+@import '@material/theme/mdc-theme';

@@ -1693,15 +1693,24 @@ camelcase@^4.1.0:
 
 "candidatexyz-common-js@https://github.com/TheLocust3/candidatexyz-common-js.git":
   version "1.0.1"
-  resolved "https://github.com/TheLocust3/candidatexyz-common-js.git#dd152651fdb6b3083f62434c7898cd80286c50bf"
+  resolved "https://github.com/TheLocust3/candidatexyz-common-js.git#2ad7b267e3026bbd9e246a395390357c491197a6"
   dependencies:
     babel-cli "^6.26.0"
     babel-polyfill "^6.26.0"
     babel-preset-es2015 "^6.24.1"
+    babel-preset-react "^6.24.1"
     babel-preset-stage-0 "^6.24.1"
+    draft-js "^0.10.5"
+    draftjs-to-html "^0.8.4"
+    html-to-draftjs "^1.4.0"
     j-toker "^0.0.10-beta3"
     jquery "^3.3.1"
     lodash "^4.17.10"
+    material-components-web "^0.37.0"
+    proptypes "^1.1.0"
+    react "^16.4.1"
+    react-dom "^16.4.1"
+    react-draft-wysiwyg "^1.12.13"
     redux "^4.0.0"
 
 caniuse-api@^1.5.2:
@@ -5361,6 +5370,10 @@ prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.6.0:
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
 
+proptypes@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/proptypes/-/proptypes-1.1.0.tgz#78b3828a5aa6bb1308939e0de3c6044dfd4bd239"
+
 proxy-addr@~2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/proxy-addr/-/proxy-addr-2.0.2.tgz#6571504f47bb988ec8180253f85dd7e14952bdec"
@@ -5518,6 +5531,15 @@ react-dom@^16.2.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
+react-dom@^16.4.1:
+  version "16.4.1"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.4.1.tgz#7f8b0223b3a5fbe205116c56deb85de32685dad6"
+  dependencies:
+    fbjs "^0.8.16"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
+
 react-draft-wysiwyg@^1.12.13:
   version "1.12.13"
   resolved "https://registry.yarnpkg.com/react-draft-wysiwyg/-/react-draft-wysiwyg-1.12.13.tgz#609bf9918607837223b67893b1e40d58e20341f4"
@@ -5565,6 +5587,15 @@ react-router@^4.2.0:
 react@^16.2.0:
   version "16.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.2.0.tgz#a31bd2dab89bff65d42134fa187f24d054c273ba"
+  dependencies:
+    fbjs "^0.8.16"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
+
+react@^16.4.1:
+  version "16.4.1"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.4.1.tgz#de51ba5764b5dbcd1f9079037b862bd26b82fe32"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
