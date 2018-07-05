@@ -12,6 +12,7 @@ import Footer from '../components/containers/base/Footer';
 import AdminOverlay from '../components/containers/base/AdminOverlay';
 
 import RootRoutes from './RootRoutes';
+import StaffRoutes from './StaffRoutes';
 
 // Always start navigation at the top of the page
 const ScrollToTop = () => {
@@ -36,6 +37,8 @@ class Routes extends React.Component {
                     <AdminOverlay />
 
                     <Switch>
+                        <Route path='/staff' component={StaffRoutes} />
+
                         <Route path='/' component={RootRoutes} />
                     </Switch>
 

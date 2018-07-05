@@ -17,7 +17,6 @@ class InitialSchema < ActiveRecord::Migration[5.1]
       t.string "url"
       t.text "body"
       t.string "image"
-      t.boolean "protected", default: false
 
       t.timestamps
     end
