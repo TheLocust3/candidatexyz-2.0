@@ -2,11 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
 
 import { history } from '../constants';
 import { fetchWebsiteTitle } from '../components/actions/global-actions';
 
-import MDCAutoInit from '../components/components/MDCAutoInit';
 import Navbar from '../components/containers/base/Navbar';
 import Footer from '../components/containers/base/Footer';
 import AdminOverlay from '../components/containers/base/AdminOverlay';

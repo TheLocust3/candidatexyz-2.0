@@ -8,7 +8,9 @@ import { UserActions, AuthApi } from 'candidatexyz-common-js';
 import { Fab } from 'candidatexyz-common-js/lib/elements';
 
 import { setEdit, popContentHistory } from '../../actions/content-actions';
-import { history } from '../../../constants';
+import { history, APP_DOMAIN } from '../../../constants';
+
+import EditContent from './EditContent'
 
 class AdminOverlay extends React.Component {
     
@@ -90,7 +92,7 @@ class AdminOverlay extends React.Component {
 
         return (
             <div className='overlay'>
-                {/* <EditContent /> */}
+                <EditContent />
 
                 {this.renderEditSnackbar()}
 
@@ -108,7 +110,7 @@ class AdminOverlay extends React.Component {
                     <div className='mdc-menu-anchor'>
                         <div id='admin-overlay-settings' className='mdc-menu' tabIndex='-1'>
                             <ul className='mdc-menu__items mdc-list' role='menu' aria-hidden='true'>
-                                <a href='#' className='menu-item-link'>
+                                <a href={APP_DOMAIN} className='menu-item-link'>
                                     <li className='mdc-list-item' role='menuitem' tabIndex='0'>
                                         Dashboard
                                     </li>
