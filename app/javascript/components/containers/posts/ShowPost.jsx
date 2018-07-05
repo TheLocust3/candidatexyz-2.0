@@ -13,14 +13,10 @@ import Post from '../../components/posts/Post';
 
 class ShowPost extends React.Component {
     
-    constructor(props) {
-        super(props);
-
-        this.state = { post: this.findPost(props) };
-    }
-
     componentWillMount() {
-        if (_.isEmpty(this.state.post.url)) {
+        let post = this.findPost(this.props);
+
+        if (_.isEmpty(post.url)) {
             this.props.dispatch(fetchPost(this.props.postType, this.props.url));
         }
     }
@@ -42,13 +38,15 @@ class ShowPost extends React.Component {
     }
 
     render() {
-        if (!_.isEmpty(this.state.post.title)) {
-            this.props.dispatch(setDocumentTitle(this.state.post.title));
+        let post = this.findPost(this.props);
+        
+        if (!_.isEmpty(post.title)) {
+            this.props.dispatch(setDocumentTitle(post.title));
         }
 
         return (
             <div onClick={this.onEditClick.bind(this)}>
-                <Post post={this.state.post} headerType={this.props.headerType} />
+                <Post post={post} headerType={this.props.headerType} hideShare={this.props.hideShare} />
             </div>
         );
     }
@@ -57,7 +55,8 @@ class ShowPost extends React.Component {
 ShowPost.propTypes = {
     postType: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
-    headerType: PropTypes.string
+    headerType: PropTypes.string,
+    hideShare: PropTypes.bool
 };
 
 function mapStateToProps(state) {

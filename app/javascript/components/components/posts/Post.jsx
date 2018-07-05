@@ -10,19 +10,30 @@ import Share from '../global/Share';
 
 export default class Post extends React.Component {
 
+    renderShare() {
+        if (this.props.hideShare) return;
+
+        return <Share text={this.props.post.title} url={`${DOMAIN}/issues/${this.props.post.url}`} />;
+    }
+
     render() {
-        let { posts, headerType, ...props } = this.props;
+        let { posts, headerType, hideShare, ...props } = this.props;
 
         return (
             <div className='post' {...props}>
                 <Text type={headerType}>{this.props.post.title}</Text>
 
-                <div className='post-created-at'>{moment(this.props.post.createdAt).format('MMMM D, YYYY')}</div><br />
-                <img className='post-image' src={this.props.post.image} /><br /><br />
+                <Text type='body2'>
+                    {moment(this.props.post.createdAt).format('MMMM D, YYYY')}
+                </Text>
 
-                <span dangerouslySetInnerHTML={{__html: this.props.post.body }} {...props} />
+                <img className='post-image' src={this.props.post.image} /><br />
 
-                <Share text={this.props.post.title} url={`${DOMAIN}/issues/${this.props.post.url}`} />
+                <Text type='body1'>
+                    <span dangerouslySetInnerHTML={{__html: this.props.post.body }} {...props} />
+                </Text>
+
+                {this.renderShare()}
             </div>
         );
     }
@@ -30,5 +41,6 @@ export default class Post extends React.Component {
 
 Post.propTypes = {
     post: PropTypes.object,
-    headerType: PropTypes.string
+    headerType: PropTypes.string,
+    hideShare: PropTypes.bool
 };

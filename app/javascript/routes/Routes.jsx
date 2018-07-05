@@ -33,14 +33,18 @@ class Routes extends React.Component {
                 <div>
                     <Route component={ScrollToTop} />
 
-                    <Navbar />
-                    <AdminOverlay />
+                    <div className='content-root'>
+                        <Navbar />
+                        <AdminOverlay />
 
-                    <Switch>
-                        <Route path='/staff' component={StaffRoutes} />
+                        <div className='content-wrapper'>
+                            <Switch>
+                                <Route path='/staff' component={StaffRoutes} />
 
-                        <Route path='/' component={RootRoutes} />
-                    </Switch>
+                                <Route path='/' component={RootRoutes} />
+                            </Switch>
+                        </div>
+                    </div>
 
                     <Footer />
 

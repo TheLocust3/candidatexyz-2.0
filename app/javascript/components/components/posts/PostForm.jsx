@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, TextField, TextEditor, Form } from 'candidatexyz-common-js/lib/elements';
+import { Text, Button, TextField, TextEditor, Form } from 'candidatexyz-common-js/lib/elements';
 
 import { history } from '../../../constants';
 import PostApi from '../../../api/post-api';
@@ -77,25 +77,26 @@ export default class PostForm extends React.Component {
         if (_.isEmpty(this.props.post)) return;
 
         return (
-            <Button style={{ float: 'right', marginRight: '3%' }} onClick={this.onDeleteClick.bind(this)}>Delete</Button>
+            <Button className='form-button-right-extra' onClick={this.onDeleteClick.bind(this)}>Delete</Button>
         );
     }
 
     render() {
         return (
-            <Form handleSubmit={(event) => this.handleSubmit(event)} errors={this.state.errors} className='content content-bottom content-15'>
+            <Form handleSubmit={(event) => this.handleSubmit(event)} errors={this.state.errors} className='content content-15'>
                 <TextField label='Title' name='title' onChange={(event) => this.handleChange(event)} defaultValue={this.state.post.title} style={{ width: '100%' }} /><br />
 
                 <TextField label='Article URL' name='url' onChange={(event) => this.handleChange(event)} defaultValue={this.state.post.url} style={{ width: '100%' }} required />
                 <br /><br />
 
-                <ImageUploader text='Upload Image' handleUpload={(url) => this.onUpload(url)} styleOuter={{ display: 'inline-block' }} />
-                <i style={{ marginLeft: '3%' }}>{this.state.post.image}</i>
-                <br />
+                <Text type='body1'>
+                    <ImageUploader text='Upload Image' handleUpload={(url) => this.onUpload(url)} styleOuter={{ display: 'inline-block' }} />
+                    <span style={{ marginLeft: '3%' }}>{this.state.post.image}</span>
+                </Text>
 
                 <TextEditor label='Body' content={this.state.post.body} onChange={(text) => { this.handleEditorChange(text) }} />
 
-                <Button style={{ float: 'right' }}>Save</Button>
+                <Button className='form-button-right'>Save</Button>
                 {this.renderDeleteButton()}
             </Form>
         );

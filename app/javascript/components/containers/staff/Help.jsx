@@ -100,16 +100,18 @@ class Help extends React.Component {
 
     render() {
         return (
-            <div className='content content-15 content-bottom'>
+            <div className='content content-15'>
                 <Text type='headline2'>Help</Text><br />
 
                 {this.renderSlide()}
                 <br /><br />
 
-                <TextContent identifier='helpSampleText' />
+                <Text type='body1'>
+                    <TextContent identifier='helpSampleText' />
+                </Text>
                 <br /><br />
 
-                <ShowPost postType='help' url='help-sample-long' headerType='headline4' />
+                <ShowPost postType='help' url='help-sample-long' headerType='headline4' hideShare />
                 
                 <MDCAutoInit />
             </div>

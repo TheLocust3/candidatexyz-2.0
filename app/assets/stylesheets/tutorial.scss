@@ -1,0 +1,22 @@
+.tutorial-slideshow {
+    position: relative;
+    height: 50vh;
+
+    padding: 5%;
+
+    border-style: dashed;
+    border-color: #E0E0E0;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.tutorial-slideshow-inner {
+    position: relative;
+    height: 60%;
+}
+
+.tutorial-slideshow-button {
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+}

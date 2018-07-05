@@ -1,3 +1,29 @@
 @import 'global';
 @import 'theme';
 
+.footer {
+    background-color: white;
+    height: 60px;
+    z-index: 99;
+
+    margin-top: -61px; // 1 extra pixel for top border
+
+    border: 0px solid;
+    border-top-width: 1px;
+    border-color: #E0E0E0;
+
+    text-align: center;
+}
+
+.footer-content {
+    padding-top: 1%;
+}
+
+.form-button-right {
+    float: right;
+}
+
+.form-button-right-extra {
+    float: right;
+    margin-right: 3%;
+}
