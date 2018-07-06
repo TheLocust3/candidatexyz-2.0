@@ -21,3 +21,6 @@ Content.create(content_type: 'link', identifier: 'footerLink4', content: { text:
 
 # news
 Content.create(content_type: 'text', identifier: 'newsHeader', content: { text: 'News' })
+
+# issues
+Content.create(content_type: 'text', identifier: 'issuesHeader', content: { text: 'Issues' })

@@ -6,8 +6,11 @@ import { CampaignActions, AnalyticEntryApi } from 'candidatexyz-common-js';
 import { CAMPAIGN_NAME } from '../constants';
 
 import Index from '../components/containers/Index';
+
 import News from '../components/containers/news/News';
 import ShowNews from '../components/containers/news/ShowNews';
+import Issues from '../components/containers/issues/Issues';
+import ShowIssue from '../components/containers/issues/ShowIssue';
 
 import NotFound from '../components/containers/NotFound';
 
@@ -42,8 +45,12 @@ class RootRoutes extends React.Component {
         return (
             <Switch>
                 <Route exact path='/' component={Index} />
+
                 <Route exact path='/news' component={News} />
                 <Route exact path='/news/:url' component={ShowNews} />
+
+                <Route exact path='/issues' component={Issues} />
+                <Route exact path='/issues/:url' component={ShowIssue} />
 
                 <Route path='/404' component={NotFound} />
                 <Redirect from='*' to='/404' />

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import moment from 'moment';
 import { Text } from 'candidatexyz-common-js/lib/elements';
 
-import { history, DOMAIN } from '../../../constants';
+import { history } from '../../../constants';
 import { fetchPost } from '../../actions/post-actions';
 import { setDocumentTitle } from '../../actions/global-actions';
 
@@ -38,6 +38,8 @@ class ShowPost extends React.Component {
     }
 
     render() {
+        let { postType, url, edit, posts, dispatch, ...props } = this.props;
+
         let post = this.findPost(this.props);
         
         if (!_.isEmpty(post.title)) {
@@ -46,7 +48,7 @@ class ShowPost extends React.Component {
 
         return (
             <div onClick={this.onEditClick.bind(this)}>
-                <Post post={post} headerType={this.props.headerType} hideShare={this.props.hideShare} />
+                <Post post={post} {...props} />
             </div>
         );
     }
@@ -54,9 +56,7 @@ class ShowPost extends React.Component {
 
 ShowPost.propTypes = {
     postType: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
-    headerType: PropTypes.string,
-    hideShare: PropTypes.bool
+    url: PropTypes.string.isRequired
 };
 
 function mapStateToProps(state) {

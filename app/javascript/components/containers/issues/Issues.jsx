@@ -1,8 +1,6 @@
-import _ from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import moment from 'moment';
 import { UserActions } from 'candidatexyz-common-js';
 import { Text } from 'candidatexyz-common-js/lib/elements';
 
@@ -10,40 +8,40 @@ import { setDocumentTitle } from '../../actions/global-actions';
 import { fetchPostType } from '../../actions/post-actions';
 
 import TextContent from '../content/TextContent';
-import NewsPreview from './NewsPreview';
+import ShowPost from '../posts/ShowPost';
 
-class News extends React.Component {
+class Issues extends React.Component {
 
     componentWillMount() {
-        this.props.dispatch(setDocumentTitle('News'));
-
         this.props.dispatch(UserActions.fetchCurrentUser());
-        this.props.dispatch(fetchPostType('news'));
+    }
+
+    componentDidMount() {
+        this.props.dispatch(setDocumentTitle('Issues'));
+        this.props.dispatch(fetchPostType('issues'));
     }
     
-    renderNewsList() {
-        let posts = _.reverse(_.sortBy(this.props.posts, [(post) => { return post.createdAt }]));
-
+    renderIssueList() {
         return (
-            <div>
-                {posts.map((post, index) => {
+            <div className='issues-list'>
+                {this.props.posts.map((post) => {
                     return (
-                        <div key={index}>
-                            <NewsPreview key={index} post={post} />
+                        <div className='issues-list-link' key={post.url}>
+                            <Link className='link' to={`/issues/${post.url}`}>{post.title}</Link>
                         </div>
-                    );
+                    )
                 })}
             </div>
-        );
+        )
     }
 
-    renderAddNews() {
+    renderAddIssue() {
         if (!this.props.isUserReady || _.isEmpty(this.props.user)) return;
 
         return (
-            <Link className='link' to={`/staff/posts/news/new`}>
+            <Link className='link' to={`/staff/posts/issues/new`}>
                 <Text type='headline6' className='underline-headline6 underline-headline6--hoverable'>
-                    Add News
+                    Add Issue
                 </Text>
             </Link>
         );
@@ -52,13 +50,10 @@ class News extends React.Component {
     render() {
         return (
             <div className='content content-10'>
-                <Text type='headline2'><TextContent identifier='newsHeader' /></Text>
+                <Text type='headline2'><TextContent identifier='issuesHeader' /></Text>
+                {this.renderAddIssue()}<br />
 
-                <div className='content-2'>
-                    {this.renderAddNews()}<br /><br />
-
-                    {this.renderNewsList()}
-                </div>
+                {this.renderIssueList()}
             </div>
         );
     }
@@ -68,8 +63,8 @@ function mapStateToProps(state) {
     return {
         posts: state.posts.postsOfType,
         isUserReady: state.users.isCurrentUserReady,
-        user: state.users.currentUser,
+        user: state.users.currentUser
     };
 }
 
-export default connect(mapStateToProps)(News);
+export default connect(mapStateToProps)(Issues);
