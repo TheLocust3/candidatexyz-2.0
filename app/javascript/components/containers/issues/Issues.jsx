@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -8,7 +9,7 @@ import { setDocumentTitle } from '../../actions/global-actions';
 import { fetchPostType } from '../../actions/post-actions';
 
 import TextContent from '../content/TextContent';
-import ShowPost from '../posts/ShowPost';
+import PostThumbnail from '../posts/PostThumbnail';
 
 class Issues extends React.Component {
 
@@ -23,13 +24,17 @@ class Issues extends React.Component {
     
     renderIssueList() {
         return (
-            <div className='issues-list'>
-                {this.props.posts.map((post) => {
+            <div>
+                {_.range(0, this.props.posts.length, 3).map((index) => {
                     return (
-                        <div className='issues-list-link' key={post.url}>
-                            <Link className='link' to={`/issues/${post.url}`}>{post.title}</Link>
+                        <div key={index} className='posts-thumbnail-row'>
+                            {_.range(index, index + 3).map((i) => {
+                                if (i >= this.props.posts.length) return <div key={i} style={{ display: 'table-cell' }} />;
+
+                                return <PostThumbnail key={this.props.posts[i].id} post={this.props.posts[i]} />
+                            })}
                         </div>
-                    )
+                    );
                 })}
             </div>
         )
@@ -51,7 +56,8 @@ class Issues extends React.Component {
         return (
             <div className='content content-10'>
                 <Text type='headline2'><TextContent identifier='issuesHeader' /></Text>
-                {this.renderAddIssue()}<br />
+                {this.renderAddIssue()}
+                <br /><br />
 
                 {this.renderIssueList()}
             </div>

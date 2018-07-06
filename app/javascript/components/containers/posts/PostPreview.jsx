@@ -11,7 +11,7 @@ import Post from '../../components/posts/Post';
 
 const PREVIEW_BODY_LENGTH = 3000;
 
-class NewsPreview extends React.Component {
+class PostPreview extends React.Component {
 
     componentDidMount() {
         objectFitImages();
@@ -50,8 +50,8 @@ class NewsPreview extends React.Component {
     }
 }
 
-NewsPreview.propTypes = {
+PostPreview.propTypes = {
     post: PropTypes.object.isRequired
 };
 
-export default NewsPreview;
+export default PostPreview;

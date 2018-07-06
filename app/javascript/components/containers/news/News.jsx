@@ -10,7 +10,7 @@ import { setDocumentTitle } from '../../actions/global-actions';
 import { fetchPostType } from '../../actions/post-actions';
 
 import TextContent from '../content/TextContent';
-import NewsPreview from './NewsPreview';
+import PostPreview from '../posts/PostPreview';
 
 class News extends React.Component {
 
@@ -29,7 +29,7 @@ class News extends React.Component {
                 {posts.map((post, index) => {
                     return (
                         <div key={index}>
-                            <NewsPreview key={index} post={post} />
+                            <PostPreview key={index} post={post} />
                         </div>
                     );
                 })}

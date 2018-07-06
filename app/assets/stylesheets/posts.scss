@@ -17,26 +17,6 @@
     width: 90%;
 }
 
-.post-image-preview {
-    height: 50vh;
-    object-fit: cover;
-    font-family: 'object-fit: cover;';
-}
-
-.floating-title {
-    position: absolute;
-    top: 20%;
-    margin-left: 5%;
-    margin-right: 5%;
-
-    color: white;
-    text-align: center;
-
-    @media (max-width: $mobile-width) {
-        top: 10%;
-    }
-}
-
 .share-menu {
     position: fixed;
     right: 40px;
@@ -50,4 +30,70 @@
 
 .share-sub-button {
     margin-bottom: 30%;
+}
+
+.posts-thumbnail-row {
+    display: table;
+    border-spacing: 2vw;
+
+    @media (max-width: $mobile-width) {
+        border-spacing: 0;
+    }
+}
+
+.post-thumbnail {
+    display: table-cell;
+    overflow: hidden;
+    
+    position: relative;
+    width: 33%; // guess and check, get three thumbnails on one page
+    
+    padding-bottom: 3%;
+
+    border: solid darken(white, 15%) 1px;
+    border-radius: 5px;
+
+    @media (max-width: $mobile-width) {
+        display: inline-block;
+        min-width: 100%;
+
+        margin-bottom: 3%;
+    }
+}
+
+.post-thumbnail-image {
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+}
+
+.post-thumbnail-text {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.post-thumbnail-created-at {
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+    width: 100%;
+
+    text-align: center;
+}
+
+
+.issue-image-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50vh;
+
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+}
+
+.issue-body {
+    margin-top: 40vh;
 }
