@@ -30,11 +30,10 @@ body, #root {
 
 .content {
     margin: 3%;
+    margin-top: 70px; // navbar
     margin-bottom: 81px; // Footer has a negative top margin of 61px so got to counter that
 
-    @media (max-width: $mobile-width) {
-        margin-top: 10vh;
-    }
+    padding-top: 3%;
 }
 
 .content-5 {
