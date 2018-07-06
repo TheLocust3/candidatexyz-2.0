@@ -1,7 +1,7 @@
 @import 'global';
 
-$red-button: #F44336;
-$blue-button: #2196F3;
+$red-button: #E53935;
+$blue-button: #1E88E5;
 
 .mdc-toolbar {
     height: 70px;
@@ -28,6 +28,7 @@ $blue-button: #2196F3;
 
 .navbar-link-holder {
     min-width: 70%;
+    margin-left: 120px;
 }
 
 .navbar-link {

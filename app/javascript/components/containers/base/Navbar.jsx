@@ -54,13 +54,15 @@ class Navbar extends React.Component {
                             <div style={{ marginLeft: '1vw' }}>
                                 <Link to='/'><ImageContent identifier='logo' className='navbar-image middle' /></Link>
                             </div>
+
+                             <div className='navbar-link-holder'>
+                                <LinkContent identifier='navLink1' type='headline6' className='navbar-link' textClassName='navbar-link-text' />
+                                <LinkContent identifier='navLink2' type='headline6' className='navbar-link' textClassName='navbar-link-text' />
+                                <LinkContent identifier='navLink3' type='headline6' className='navbar-link' textClassName='navbar-link-text' />
+                            </div>
                         </section>
 
-                        <section className='mdc-toolbar__section mdc-toolbar__section--align-end navbar-link-holder'>
-                            <LinkContent identifier='navLink1' type='headline6' className='navbar-link' textClassName='navbar-link-text' />
-                            <LinkContent identifier='navLink2' type='headline6' className='navbar-link' textClassName='navbar-link-text' />
-                            <LinkContent identifier='navLink3' type='headline6' className='navbar-link' textClassName='navbar-link-text' />
-
+                        <section className='mdc-toolbar__section mdc-toolbar__section--align-end'>
                             <ButtonLinkContent identifier='navButton1' type='headline6' className='navbar-link' textClassName='navbar-link-text' buttonClassName='navbar-button navbar-button-blue' />
                             <ButtonLinkContent identifier='navButton2' type='headline6' className='navbar-link' textClassName='navbar-link-text' buttonClassName='navbar-button navbar-button-red' />
                         </section>
