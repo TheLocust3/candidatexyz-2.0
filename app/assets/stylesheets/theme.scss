@@ -1,7 +1,7 @@
 @import 'global';
 
-$mdc-theme-primary: #00427c;
-$mdc-theme-secondary: #00427c;
+$mdc-theme-primary: $primary;
+$mdc-theme-secondary: $primary;
 
 .mdc-snackbar {
     z-index: 9999;

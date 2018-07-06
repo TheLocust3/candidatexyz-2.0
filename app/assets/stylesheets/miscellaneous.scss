@@ -2,21 +2,42 @@
 @import 'theme';
 
 .footer {
-    background-color: white;
-    height: 60px;
+    height: 170px;
     z-index: 99;
 
-    margin-top: -61px; // 1 extra pixel for top border
+    margin-top: -171px; // 1 extra pixel for top border
 
     border: 0px solid;
     border-top-width: 1px;
     border-color: #E0E0E0;
 
     text-align: center;
+    color: white;
+    background-color: $primary;
 }
 
 .footer-content {
-    padding-top: 1%;
+    padding-top: 30px;
+}
+
+.footer-link {
+    display: inline-block;
+
+    margin-right: 10px;
+    margin-left: 10px;
+
+    color: white;
+    text-decoration: none;
+}
+
+.footer-link-text {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.footer-link-text:hover {
+    color: darken(white, 10%);
 }
 
 .form-button-right {

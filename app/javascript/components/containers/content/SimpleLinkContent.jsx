@@ -35,13 +35,15 @@ class SimpleLinkContent extends React.Component {
     }
 
     render() {
-        let { identifier, contents, edit, dispatch, editOverlayOpen, isReady, ...props } = this.props;
+        let { identifier, type, textClassName, contents, edit, dispatch, editOverlayOpen, isReady, ...props } = this.props;
         let content = this.findContent();
+        type = _.isEmpty(type) ? 'body1' : type;
+        textClassName = _.isEmpty(textClassName) ? '' : textClassName;
 
         return (
             <span id={identifier}>
                 <Link to={content.content.url} onClick={this.onEditContent.bind(this)} {...props}>
-                    <Text type='body1'>{content.content.text}</Text>
+                    <Text type={type} className={textClassName}>{content.content.text}</Text>
                 </Link>
             </span>
         );
@@ -49,7 +51,9 @@ class SimpleLinkContent extends React.Component {
 }
 
 SimpleLinkContent.propTypes = {
-    identifier: PropTypes.string.isRequired
+    identifier: PropTypes.string.isRequired,
+    type: PropTypes.string,
+    textClassName: PropTypes.string
 };
 
 function mapStateToProps(state) {

@@ -1,3 +1,48 @@
-.navbar {
+@import 'global';
 
+.mdc-toolbar {
+    height: 70px;
+}
+
+.mdc-toolbar__row {
+    min-height: 70px;
+}
+
+.navbar {
+    height: 70px;
+    margin-bottom: 1%;
+
+    background-color: $primary;
+}
+
+.navbar-image {
+    height: 55px;
+
+    border: solid;
+    border-width: 1px;
+    border-color: white;
+}
+
+.navbar-link-holder {
+    min-width: 70%;
+}
+
+.navbar-link {
+    display: inline-block;
+
+    margin-right: 10px;
+    margin-left: 10px;
+
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-link-text {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navbar-link-text:hover { 
+    color: darken(white, 10%);
 }
