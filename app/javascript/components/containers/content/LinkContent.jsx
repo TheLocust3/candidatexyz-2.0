@@ -7,7 +7,7 @@ import { Text } from 'candidatexyz-common-js/lib/elements';
 
 import { fetchContent, setEditingContent } from '../../actions/content-actions';
 
-class SimpleLinkContent extends React.Component {
+class LinkContent extends React.Component {
 
     componentWillMount() {
         if (_.isEmpty(this.findContent().identifier)) {
@@ -34,23 +34,37 @@ class SimpleLinkContent extends React.Component {
         this.props.dispatch(setEditingContent(this.findContent()));
     }
 
-    render() {
+    renderLink() {
         let { identifier, type, textClassName, contents, edit, dispatch, editOverlayOpen, isReady, ...props } = this.props;
         let content = this.findContent();
         type = _.isEmpty(type) ? 'body1' : type;
         textClassName = _.isEmpty(textClassName) ? '' : textClassName;
 
-        return (
-            <span id={identifier}>
+        if (_.startsWith(content.content.url, 'http') || _.startsWith(content.content.url, 'www.')) {
+            return (
+                <a href={content.content.url} onClick={this.onEditContent.bind(this)} {...props}>
+                    <Text type={type} className={textClassName}>{content.content.text}</Text>
+                </a>
+            );
+        } else {
+            return (
                 <Link to={content.content.url} onClick={this.onEditContent.bind(this)} {...props}>
                     <Text type={type} className={textClassName}>{content.content.text}</Text>
                 </Link>
+            );
+        }
+    }
+
+    render() {
+        return (
+            <span id={this.props.identifier}>
+                {this.renderLink()}
             </span>
         );
     }
 }
 
-SimpleLinkContent.propTypes = {
+LinkContent.propTypes = {
     identifier: PropTypes.string.isRequired,
     type: PropTypes.string,
     textClassName: PropTypes.string
@@ -65,4 +79,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps)(SimpleLinkContent);
+export default connect(mapStateToProps)(LinkContent);

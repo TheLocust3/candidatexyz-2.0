@@ -5,7 +5,7 @@ import { Text } from 'candidatexyz-common-js/lib/elements';
 
 import { APP_DOMAIN } from '../../../constants';
 
-import SimpleLinkContent from '../content/SimpleLinkContent';
+import LinkContent from '../content/LinkContent';
 
 class Footer extends React.Component {
     
@@ -14,13 +14,13 @@ class Footer extends React.Component {
             <div className='footer'>
                 <div className='footer-content'>
                     <div>
-                        <SimpleLinkContent identifier='navLink1' type='headline6' className='footer-link' textClassName='footer-link-text' />
+                        <LinkContent identifier='navLink1' type='headline6' className='footer-link' textClassName='footer-link-text' />
 
-                        <SimpleLinkContent identifier='navLink2' type='headline6' className='footer-link' textClassName='footer-link-text' />
+                        <LinkContent identifier='navLink2' type='headline6' className='footer-link' textClassName='footer-link-text' />
 
-                        <SimpleLinkContent identifier='navLink3' type='headline6' className='footer-link' textClassName='footer-link-text' />
+                        <LinkContent identifier='navLink3' type='headline6' className='footer-link' textClassName='footer-link-text' />
 
-                        <SimpleLinkContent identifier='footerLink4' type='headline6' className='footer-link' textClassName='footer-link-text' />
+                        <LinkContent identifier='footerLink4' type='headline6' className='footer-link' textClassName='footer-link-text' />
                     </div>
                     <br />
 
@@ -42,7 +42,7 @@ class Footer extends React.Component {
                     <div>
                         <a href='https://candidatexyz.com' className='footer-link'>
                             <Text type='body2'>
-                                Created with candidateXYZ.
+                                Created with candidate<span className='xyz'>XYZ</span>.
                             </Text>
                         </a>
                     </div>

@@ -9,9 +9,12 @@ Post.create(post_type: 'help', url: 'help-sample-long', title: 'Sample Post', bo
 # navbar
 Content.create(content_type: 'image', identifier: 'logo', content: { image: 'https://static1.squarespace.com/static/598dd363a5790a4026dac8ab/t/59933e3e7131a5f7bfb18c09/1518809293655/?format=1500w' })
 
-Content.create(content_type: 'link', identifier: 'navLink1', content: { text: 'Meet CandidateXYZ', url: '/meet' })
-Content.create(content_type: 'link', identifier: 'navLink2', content: { text: 'On the Issues', url: '/issues' })
-Content.create(content_type: 'link', identifier: 'navLink3', content: { text: 'Take Action', url: '/action' })
+Content.create(content_type: 'link', identifier: 'navLink1', content: { text: 'About', url: '/about' })
+Content.create(content_type: 'link', identifier: 'navLink2', content: { text: 'Issues', url: '/issues' })
+Content.create(content_type: 'link', identifier: 'navLink3', content: { text: 'News', url: '/news' })
+
+Content.create(content_type: 'link', identifier: 'navButton1', content: { text: 'Take Action', url: '/action' })
+Content.create(content_type: 'link', identifier: 'navButton2', content: { text: 'Donate Now', url: 'https://secure.actblue.com' })
 
 # footer
 Content.create(content_type: 'link', identifier: 'footerLink4', content: { text: 'Contact', url: '/contact' })

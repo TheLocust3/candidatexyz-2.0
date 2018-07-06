@@ -1,5 +1,8 @@
 @import 'global';
 
+$red-button: #F44336;
+$blue-button: #2196F3;
+
 .mdc-toolbar {
     height: 70px;
 }
@@ -45,4 +48,30 @@
 
 .navbar-link-text:hover { 
     color: darken(white, 10%);
+}
+
+.navbar-button {
+    height: 30px;
+    margin: 0;
+
+    padding: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media (max-width: $mobile-width) {
+        padding-top: 5px;
+        padding-bottom: 35px;
+    }
+}
+
+.navbar-button .navbar-link-text:hover {
+    color: white;
+}
+
+.navbar-button-red {
+    background-color: $red-button !important;
+}
+
+.navbar-button-blue {
+    background-color: $blue-button !important;
 }

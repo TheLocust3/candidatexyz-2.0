@@ -7,7 +7,8 @@ import { MDCTemporaryDrawer } from '@material/drawer';
 import { MAX_MOBILE_WIDTH } from '../../../constants';
 import TextContent from '../content/TextContent';
 import ImageContent from '../content/ImageContent';
-import SimpleLinkContent from '../content/SimpleLinkContent';
+import LinkContent from '../content/LinkContent';
+import ButtonLinkContent from '../content/ButtonLinkContent';
 
 class Navbar extends React.Component {
 
@@ -56,11 +57,12 @@ class Navbar extends React.Component {
                         </section>
 
                         <section className='mdc-toolbar__section mdc-toolbar__section--align-end navbar-link-holder'>
-                            <SimpleLinkContent identifier='navLink1' type='headline6' className='navbar-link' textClassName='navbar-link-text' />
+                            <LinkContent identifier='navLink1' type='headline6' className='navbar-link' textClassName='navbar-link-text' />
+                            <LinkContent identifier='navLink2' type='headline6' className='navbar-link' textClassName='navbar-link-text' />
+                            <LinkContent identifier='navLink3' type='headline6' className='navbar-link' textClassName='navbar-link-text' />
 
-                            <SimpleLinkContent identifier='navLink2' type='headline6' className='navbar-link' textClassName='navbar-link-text' />
-
-                            <SimpleLinkContent identifier='navLink3' type='headline6' className='navbar-link' textClassName='navbar-link-text' />
+                            <ButtonLinkContent identifier='navButton1' type='headline6' className='navbar-link' textClassName='navbar-link-text' buttonClassName='navbar-button navbar-button-blue' />
+                            <ButtonLinkContent identifier='navButton2' type='headline6' className='navbar-link' textClassName='navbar-link-text' buttonClassName='navbar-button navbar-button-red' />
                         </section>
                     </div>
                 </header>
@@ -95,11 +97,14 @@ class Navbar extends React.Component {
 
                         <nav className='mdc-drawer__content mdc-list-group'>
                             <div className='mdc-list'>
-                                <SimpleLinkContent identifier='navLink1' className='mdc-list-item' onClick={this.onLinkClick.bind(this)} />
+                                <LinkContent identifier='navLink1' className='mdc-list-item' onClick={this.onLinkClick.bind(this)} />
+                                <LinkContent identifier='navLink2' className='mdc-list-item' onClick={this.onLinkClick.bind(this)} />
+                                <LinkContent identifier='navLink3' className='mdc-list-item' onClick={this.onLinkClick.bind(this)} />
+                                <br />
 
-                                <SimpleLinkContent identifier='navLink2' className='mdc-list-item' onClick={this.onLinkClick.bind(this)} />
-
-                                <SimpleLinkContent identifier='navLink3' className='mdc-list-item' onClick={this.onLinkClick.bind(this)} />
+                                <ButtonLinkContent identifier='navButton1' type='headline6' className='navbar-link' textClassName='navbar-link-text' buttonClassName='navbar-button navbar-button-blue' />
+                                <br /><br />
+                                <ButtonLinkContent identifier='navButton2' type='headline6' className='navbar-link' textClassName='navbar-link-text' buttonClassName='navbar-button navbar-button-red' />
                             </div>
                         </nav>
                     </nav>
