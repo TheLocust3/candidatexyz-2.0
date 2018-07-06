@@ -19,6 +19,8 @@ export default class Post extends React.Component {
     render() {
         let { posts, headerType, hideShare, ...props } = this.props;
 
+        headerType = _.isEmpty(headerType) ? 'headline3' : headerType;
+
         return (
             <div className='post' {...props}>
                 <Text type={headerType}>{this.props.post.title}</Text>
@@ -26,10 +28,13 @@ export default class Post extends React.Component {
                 <Text type='body2'>
                     {moment(this.props.post.createdAt).format('MMMM D, YYYY')}
                 </Text>
+                <br />
 
-                <img className='post-image' src={this.props.post.image} /><br />
+                <div className='post-image-wrapper'>
+                    <img className='post-image' src={this.props.post.image} />
+                </div>
 
-                <Text type='body1'>
+                <Text type='body1' className='post-body'>
                     <span dangerouslySetInnerHTML={{__html: this.props.post.body }} {...props} />
                 </Text>
 

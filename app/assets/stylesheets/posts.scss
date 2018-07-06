@@ -4,13 +4,17 @@
     margin-bottom: 5%;
 }
 
-.post img {
+.post-body img {
     width: 100% !important; // override draft-js-to-html styling
     height: auto;
 }
 
+.post-image-wrapper {
+    text-align: center;
+}
+
 .post-image {
-    width: 100%;
+    width: 90%;
 }
 
 .post-image-preview {

@@ -31,9 +31,14 @@ body, #root {
 .content {
     margin: 3%;
     margin-top: 70px; // navbar
-    margin-bottom: 81px; // Footer has a negative top margin of 61px so got to counter that
+    margin-bottom: 191px; // footer height
 
     padding-top: 3%;
+}
+
+.content-2 {
+    margin-left: 2%;
+    margin-right: 2%;   
 }
 
 .content-5 {
@@ -102,4 +107,31 @@ body, #root {
 .unstyled-link {
     text-decoration: none;
     color: black;
+}
+
+.link {
+    display: inline-block;
+
+    text-decoration: none;
+    color: $link-color;
+}
+
+.link:hover {
+    color: $link-hover-color;
+}
+
+.underline-headline6 {
+    box-shadow: inset 0 -7px 0 white, inset 0 -8px 0 $link-color;
+}
+
+.underline-headline6--hoverable:hover {
+    box-shadow: inset 0 -7px 0 white, inset 0 -8px 0 $link-hover-color;
+}
+
+.underline-body2 {
+    box-shadow: inset 0 -1px 0 white, inset 0 -2px 0 $link-color;
+}
+
+.underline-body2--hoverable:hover {
+    box-shadow: inset 0 -1px 0 white, inset 0 -2px 0 $link-hover-color;
 }

@@ -18,3 +18,6 @@ Content.create(content_type: 'link', identifier: 'navButton2', content: { text: 
 
 # footer
 Content.create(content_type: 'link', identifier: 'footerLink4', content: { text: 'Contact', url: '/contact' })
+
+# news
+Content.create(content_type: 'text', identifier: 'newsHeader', content: { text: 'News' })
