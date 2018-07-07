@@ -1,6 +1,8 @@
 Content.create(content_type: 'raw', identifier: 'campaignId', content: '')
 Content.create(content_type: 'text', identifier: 'websiteTitle', content: { text: 'CandidateXYZ' })
 
+Content.create(content_type: 'raw', identifier: 'voluneteerHelpOptions', content: 'Data Entry,Make Calls, Door-to-Door Canvassing,Share information and news on social media,Hold Signs/Standouts')
+
 # help
 Content.create(content_type: 'text', identifier: 'helpSampleText', content: { text: 'Some sample text' })
 Post.create(post_type: 'help', url: 'help-sample-long', title: 'Sample Post', body: "
@@ -26,7 +28,7 @@ Content.create(content_type: 'text', identifier: 'newsHeader', content: { text: 
 Content.create(content_type: 'text', identifier: 'issuesHeader', content: { text: 'Issues' })
 
 # contact
-Content.create(content_type: 'text', identifier: 'contactHeader', content: { text: "Contact Us" })
+Content.create(content_type: 'text', identifier: 'contactHeader', content: { text: 'Contact Us' })
 Content.create(content_type: 'text', identifier: 'contactBlurb', content: { text: "Submit your comments, suggestions or feedback for CandidateXYZ’s election campaign here. For inquiries regarding official business, please contact CandidateXYZ' office." })
 Content.create(content_type: 'text', identifier: 'contactVisitHeader', content: { text: 'Contact' })
 Content.create(content_type: 'text', identifier: 'contactVisitAddress', content: { text: '11 Beacon St, Boston, MA 02108' })
@@ -34,3 +36,13 @@ Content.create(content_type: 'text', identifier: 'contactPOBoxHeader', content: 
 Content.create(content_type: 'text', identifier: 'contactPOBoxAddress', content: { text: 'PO Box 1234, Boston, MA 02108' })
 Content.create(content_type: 'text', identifier: 'contactCallHeader', content: { text: 'Call' })
 Content.create(content_type: 'text', identifier: 'contactPhoneNumber', content: { text: '123-456-7890' })
+
+# take action
+Content.create(content_type: 'text', identifier: 'takeActionHeader', content: { text: 'Take Action' })
+Content.create(content_type: 'text', identifier: 'takeActionBlurb', content: { text: "We've got lots of ways for you to get involved with us!" })
+
+Content.create(content_type: 'text', identifier: 'takeActionContactHeader', content: { text: 'Join Us!' })
+Content.create(content_type: 'text', identifier: 'takeActionContactBlurb', content: { text: 'You better join us' })
+
+Content.create(content_type: 'text', identifier: 'takeActionVolunteerHeader', content: { text: 'Volunteer With Us' })
+Content.create(content_type: 'text', identifier: 'takeActionVolunteerBlurb', content: { text: 'We do cool shit' })
