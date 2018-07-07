@@ -24,3 +24,13 @@ Content.create(content_type: 'text', identifier: 'newsHeader', content: { text: 
 
 # issues
 Content.create(content_type: 'text', identifier: 'issuesHeader', content: { text: 'Issues' })
+
+# contact
+Content.create(content_type: 'text', identifier: 'contactHeader', content: { text: "Contact Us" })
+Content.create(content_type: 'text', identifier: 'contactBlurb', content: { text: "Submit your comments, suggestions or feedback for CandidateXYZ’s election campaign here. For inquiries regarding official business, please contact CandidateXYZ' office." })
+Content.create(content_type: 'text', identifier: 'contactVisitHeader', content: { text: 'Contact' })
+Content.create(content_type: 'text', identifier: 'contactVisitAddress', content: { text: '11 Beacon St, Boston, MA 02108' })
+Content.create(content_type: 'text', identifier: 'contactPOBoxHeader', content: { text: 'Write' })
+Content.create(content_type: 'text', identifier: 'contactPOBoxAddress', content: { text: 'PO Box 1234, Boston, MA 02108' })
+Content.create(content_type: 'text', identifier: 'contactCallHeader', content: { text: 'Call' })
+Content.create(content_type: 'text', identifier: 'contactPhoneNumber', content: { text: '123-456-7890' })
