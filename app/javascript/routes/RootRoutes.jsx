@@ -6,6 +6,7 @@ import { CampaignActions, AnalyticEntryApi } from 'candidatexyz-common-js';
 import { CAMPAIGN_NAME } from '../constants';
 
 import Index from '../components/containers/Index';
+import Privacy from '../components/containers/Privacy';
 import Contact from '../components/containers/Contact';
 import About from '../components/containers/About';
 import TakeAction from '../components/containers/TakeAction';
@@ -48,6 +49,7 @@ class RootRoutes extends React.Component {
         return (
             <Switch>
                 <Route exact path='/' component={Index} />
+                <Route exact path='/privacy' component={Privacy} />
                 <Route exact path='/contact' component={Contact} />
                 <Route exact path='/about' component={About} />
                 <Route exact path='/action' component={TakeAction} />

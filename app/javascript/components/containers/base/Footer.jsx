@@ -42,7 +42,7 @@ class Footer extends React.Component {
                     <div>
                         <a href='https://candidatexyz.com' className='footer-link'>
                             <Text type='body2'>
-                                Created with candidate<span className='xyz'>XYZ</span>.
+                                Created with candidateXYZ.
                             </Text>
                         </a>
                     </div>
