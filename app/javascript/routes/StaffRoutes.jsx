@@ -10,6 +10,7 @@ import RedirectExternal from './RedirectExternal';
 
 import EditPost from '../components/containers/posts/EditPost';
 import CreatePost from '../components/containers/posts/CreatePost';
+import EditRichTextContent from '../components/containers/content/EditRichTextContent';
 import EditRawContent from '../components/containers/staff/EditRawContent';
 import Help from '../components/containers/staff/Help';
 
@@ -28,6 +29,8 @@ class StaffRoutes extends React.Component {
                 <Switch>
                     <Route exact path='/staff/posts/:postType/:url/edit' component={EditPost} />
                     <Route exact path='/staff/posts/:postType/new' component={CreatePost} />
+
+                    <Route exact path='/staff/content/:identifier/edit' component={EditRichTextContent} />
 
                     <Route exact path='/staff/edit-content' component={EditRawContent} />
                     <Route exact path='/staff/help' component={Help} />

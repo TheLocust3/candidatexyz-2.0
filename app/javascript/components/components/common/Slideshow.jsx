@@ -139,4 +139,3 @@ Slideshow.propTypes = {
     time: PropTypes.number,
     children: PropTypes.arrayOf(PropTypes.element)
 };
-

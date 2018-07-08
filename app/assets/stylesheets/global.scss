@@ -28,6 +28,13 @@ body, #root {
     display: table-cell;
 }
 
+.content-bottom {
+    margin: 0;
+    margin-bottom: 191px;
+    
+    padding: 0;
+}
+
 .content {
     margin: 3%;
     margin-top: 70px; // navbar
@@ -139,4 +146,8 @@ body, #root {
 
 .underline-body2--hoverable:hover {
     box-shadow: inset 0 -1px 0 white, inset 0 -2px 0 $link-hover-color;
+}
+
+.white {
+    color: white;
 }

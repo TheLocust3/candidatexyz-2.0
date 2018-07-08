@@ -1693,7 +1693,7 @@ camelcase@^4.1.0:
 
 "candidatexyz-common-js@https://github.com/TheLocust3/candidatexyz-common-js.git":
   version "1.0.1"
-  resolved "https://github.com/TheLocust3/candidatexyz-common-js.git#e3aa530a691cc5f81e5645daa42694293e7a8b1d"
+  resolved "https://github.com/TheLocust3/candidatexyz-common-js.git#2a244a2ed6f4b68186fa4d1f70a3418e3aed664a"
   dependencies:
     babel-cli "^6.26.0"
     babel-polyfill "^6.26.0"
@@ -5549,6 +5549,10 @@ react-draft-wysiwyg@^1.12.13:
     html-to-draftjs "^1.4.0"
     linkify-it "^2.0.3"
     prop-types "^15.6.0"
+
+react-parallax@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/react-parallax/-/react-parallax-1.8.0.tgz#c7b5e845e3d829e5aedc76e77ac497edea616a22"
 
 react-redux@^5.0.6:
   version "5.0.6"

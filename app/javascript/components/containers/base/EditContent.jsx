@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 
 import { setEditOverlayOpen, fetchAllContent } from '../../actions/content-actions';
 
+import RedirectInternal from '../../components/common/RedirectInternal';
 import TextContentEditor from '../../components/content/TextContentEditor';
 import ImageContentEditor from '../../components/content/ImageContentEditor';
 import LinkContentEditor from '../../components/content/LinkContentEditor';
@@ -72,7 +73,7 @@ class EditContent extends React.Component {
             case 'alert':
                 return <AlertContentEditor content={this.props.content} />;
             default:
-                return;
+                return <RedirectInternal to={`/staff/content/${this.props.content.identifier}/edit`} />;
         }
     }
 
