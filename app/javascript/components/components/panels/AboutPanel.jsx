@@ -13,13 +13,15 @@ export default class AboutPanel extends React.Component {
             <div>
                 <Parallax height='70vh' width='100vw' imageIdentifier='aboutPanelBackground'>
                     <div className='relative' style={{ height: '70vh' }}>
-                        <div className='about-box middle'>
-                            <Text type='headline5' className='header-text upcase'><TextContent identifier='aboutPanelHeader' /></Text>
-                            <hr />
+                        <div className='about-box-wrapper'>
+                            <div className='about-box middle'>
+                                <Text type='headline5' className='header-text upcase'><TextContent identifier='aboutPanelHeader' /></Text>
+                                <hr />
 
-                            <Text type='body2'><TextContent identifier='aboutPanelBlurb' /></Text>
+                                <Text type='body2'><TextContent identifier='aboutPanelBlurb' /></Text>
 
-                            <Link to='/about'><Button className='about-box-button header-text'>Read More</Button></Link>
+                                <Link to='/about'><Button className='about-box-button header-text'>Read More</Button></Link>
+                            </div>
                         </div>
                     </div>
                 </Parallax>

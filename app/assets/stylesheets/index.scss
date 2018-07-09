@@ -6,7 +6,7 @@
     top: 30vh;
     right: 5%;
 
-    width: 425px;
+    width: 450px;
     height: 250px;
 
     background-color: white;
@@ -105,13 +105,27 @@
 
 // news panel styles
 .news-panel {
-    height: 550px;
+    height: 600px;
 
     padding-left: 10%;
     padding-right: 10%;
+
+    @media (max-width: $mobile-width) {
+        height: 650px;
+
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
 
 // about panel styles
+.about-box-wrapper {
+    @media (max-width: $mobile-width) {
+        width: 35vw; // I have no clue...
+        text-align: center;
+    }
+}
+
 .about-box {
     position: absolute;
     left: 10%;
@@ -127,6 +141,13 @@
 
     border-radius: 5px;
     border: solid 1px darken(white, 15%);
+
+    @media (max-width: $mobile-width) {
+        display: inline-block;
+        position: relative;
+        left: initial;
+        width: 60%;
+    }
 }
 
 .about-box-button {
@@ -169,6 +190,11 @@
 // slideshow styles
 .slideshow-panel {
     height: 70vh;
+
+    @media (max-width: $mobile-width) {
+        height: 100vh;
+        text-align: center;
+    }
 }
 
 .slideshow-panel-blurb {

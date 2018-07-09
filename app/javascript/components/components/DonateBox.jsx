@@ -17,34 +17,33 @@ export default class DonateBox extends React.Component {
                 </div>
 
                 <div className='mdc-layout-grid donate-buttons'>
-                    <div className='mdc-layout-grid__inner'>
-                        <div className='mdc-layout-grid__cell'>
-                            <ButtonLinkContent identifier='donateButton1' type='subtitle1' className='unstyled-link-white' textClassName='header-text upcase' buttonClassName='donate-button' />
-                        </div>
+                    <center>
+                        <div className='mdc-layout-grid__inner'>
+                            <div className='mdc-layout-grid__cell--span-4'>
+                                <ButtonLinkContent identifier='donateButton1' type='subtitle1' className='unstyled-link-white' textClassName='header-text upcase' buttonClassName='donate-button' />
+                            </div>
 
-                        <div className='mdc-layout-grid__cell'>
-                            <ButtonLinkContent identifier='donateButton2' type='subtitle1' className='unstyled-link-white' textClassName='header-text upcase' buttonClassName='donate-button' />
-                        </div>
+                            <div className='mdc-layout-grid__cell--span-4'>
+                                <ButtonLinkContent identifier='donateButton2' type='subtitle1' className='unstyled-link-white' textClassName='header-text upcase' buttonClassName='donate-button' />
+                            </div>
 
-                        <div className='mdc-layout-grid__cell'>
-                            <ButtonLinkContent identifier='donateButton3' type='subtitle1' className='unstyled-link-white' textClassName='header-text upcase' buttonClassName='donate-button' />
-                        </div>
-                    </div>
-                    <br />
+                            <div className='mdc-layout-grid__cell--span-4'>
+                                <ButtonLinkContent identifier='donateButton3' type='subtitle1' className='unstyled-link-white' textClassName='header-text upcase' buttonClassName='donate-button' />
+                            </div>
 
-                    <div className='mdc-layout-grid__inner'>
-                        <div className='mdc-layout-grid__cell'>
-                            <ButtonLinkContent identifier='donateButton4' type='subtitle1' className='unstyled-link-white' textClassName='header-text upcase' buttonClassName='donate-button' />
-                        </div>
+                            <div className='mdc-layout-grid__cell--span-4'>
+                                <ButtonLinkContent identifier='donateButton4' type='subtitle1' className='unstyled-link-white' textClassName='header-text upcase' buttonClassName='donate-button' />
+                            </div>
 
-                        <div className='mdc-layout-grid__cell'>
-                            <ButtonLinkContent identifier='donateButton5' type='subtitle1' className='unstyled-link-white' textClassName='header-text upcase' buttonClassName='donate-button' />
-                        </div>
+                            <div className='mdc-layout-grid__cell--span-4'>
+                                <ButtonLinkContent identifier='donateButton5' type='subtitle1' className='unstyled-link-white' textClassName='header-text upcase' buttonClassName='donate-button' />
+                            </div>
 
-                        <div className='mdc-layout-grid__cell'>
-                            <ButtonLinkContent identifier='donateButton6' type='subtitle1' className='unstyled-link-white' textClassName='header-text upcase' buttonClassName='donate-button' />
+                            <div className='mdc-layout-grid__cell--span-4'>
+                                <ButtonLinkContent identifier='donateButton6' type='subtitle1' className='unstyled-link-white' textClassName='header-text upcase' buttonClassName='donate-button' />
+                            </div>
                         </div>
-                    </div>
+                    </center>
                 </div>
             </div>
         );

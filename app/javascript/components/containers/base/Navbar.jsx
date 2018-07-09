@@ -134,7 +134,7 @@ class Navbar extends React.Component {
                                 <LinkContent identifier='navLink3' className='mdc-list-item' onClick={this.onLinkClick.bind(this)} />
                                 <br />
 
-                                <ButtonLinkContent identifier='navButton1' type='headline6' className='navbar-link' textClassName='navbar-link-text' buttonClassName='navbar-button navbar-button-blue' />
+                                <ButtonLinkContent identifier='navButton1' type='headline6' className='navbar-link' textClassName='navbar-link-text' buttonClassName='navbar-button navbar-button-blue' onClick={this.onLinkClick.bind(this)} />
                                 <br /><br />
                                 <ButtonLinkContent identifier='navButton2' type='headline6' className='navbar-link' textClassName='navbar-link-text' buttonClassName='navbar-button navbar-button-red' />
                             </div>

@@ -14,14 +14,14 @@ export default class SlideshowPanel extends React.Component {
         return (
             <div className='mdc-layout-grid slideshow-panel relative'>
                 <div className='mdc-layout-grid__inner'>
-                    <div className='mdc-layout-grid__cell--span-5 slideshow-panel-blurb'>
+                    <div className='mdc-layout-grid__cell--span-5 mdc-layout-grid__cell--span-8-phone slideshow-panel-blurb'>
                         <Text type='headline6'><TextContent identifier='slideshowPanelBlurb' /></Text>
                         <br />
 
                         <LinkContent identifier='slideshowPanelLink' type='headline6' className='slideshow-link' textClassName='slideshow-link' />
                     </div>
 
-                    <div className='mdc-layout-grid__cell--span-7'>
+                    <div className='mdc-layout-grid__cell--span-7 mdc-layout-grid__cell--span-8-phone'>
                         <SlideshowContent identifier='indexSlideshow' />
                     </div>
                 </div>

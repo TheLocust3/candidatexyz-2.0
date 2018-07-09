@@ -3,6 +3,18 @@
 $mdc-theme-primary: $primary;
 $mdc-theme-secondary: $primary;
 
+$mdc-layout-grid-breakpoints: (
+  desktop: $mobile-width,
+  tablet: $mobile-width,
+  phone: 0px
+);
+
+$mdc-layout-grid-columns: (
+    desktop: 12,
+    tablet: 12,
+    phone: 8
+);
+
 .mdc-snackbar {
     z-index: 9999;
 }
@@ -49,3 +61,4 @@ $mdc-theme-secondary: $primary;
 }
 
 @import '@material/theme/mdc-theme';
+@import '@material/layout-grid/mdc-layout-grid';
