@@ -2,10 +2,17 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Text, MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
 
+import { setDocumentTitle, setNavbarType, DEFAULT } from '../actions/global-actions';
+
 import MessageForm from '../components/forms/MessageForm';
 import TextContent from './content/TextContent';
 
 class Contact extends React.Component {
+
+    componentWillMount() {
+        this.props.dispatch(setDocumentTitle('Contact'));
+        this.props.dispatch(setNavbarType(DEFAULT));
+    }
 
     render() {
         return (

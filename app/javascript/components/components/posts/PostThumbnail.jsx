@@ -7,7 +7,7 @@ import { Text, Button } from 'candidatexyz-common-js/lib/elements';
 
 const THUMBNAIL_BODY_LENGTH = 300;
 
-class PostThumbnail extends React.Component {
+export default class PostThumbnail extends React.Component {
 
     componentDidMount() {
         objectFitImages();
@@ -39,5 +39,3 @@ class PostThumbnail extends React.Component {
 PostThumbnail.propTypes = {
     post: PropTypes.object.isRequired
 };
-
-export default PostThumbnail;

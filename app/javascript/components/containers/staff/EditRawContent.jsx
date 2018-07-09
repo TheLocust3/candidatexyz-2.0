@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Text, Button, MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
 
-import { setDocumentTitle } from '../../actions/global-actions';
+import { setDocumentTitle, setNavbarType, DEFAULT } from '../../actions/global-actions';
 import { history } from '../../../constants';
 import ContentApi from '../../../api/content-api';
 
@@ -33,6 +33,7 @@ class EditRawContent extends React.Component {
 
     componentDidMount() {
         this.props.dispatch(setDocumentTitle('Edit Content'));
+        this.props.dispatch(setNavbarType(DEFAULT));
     }
 
     render() {

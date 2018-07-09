@@ -2,10 +2,17 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Text } from 'candidatexyz-common-js/lib/elements';
 
+import { setDocumentTitle, setNavbarType, TRANSPARENT } from '../actions/global-actions';
+
 import TextContent from './content/TextContent';
 import Parallax from '../components/common/Parallax';
 
 class About extends React.Component {
+
+    componentWillMount() {
+        this.props.dispatch(setDocumentTitle('Meet'));
+        this.props.dispatch(setNavbarType(TRANSPARENT));
+    }
 
     render() {
         return (

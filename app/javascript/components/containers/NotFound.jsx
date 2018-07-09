@@ -2,12 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Text } from 'candidatexyz-common-js/lib/elements';
 
-import { setDocumentTitle } from '../actions/global-actions';
+import { setDocumentTitle, setNavbarType, DEFAULT } from '../actions/global-actions';
 
 class NotFound extends React.Component {
 
-    componentDidMount() {
+    componentWillMount() {
         this.props.dispatch(setDocumentTitle('Page Not Found'));
+        this.props.dispatch(setNavbarType(DEFAULT));
     }
     
     render() {

@@ -3,14 +3,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
 
-import { setDocumentTitle } from '../../actions/global-actions';
+import { setDocumentTitle, setNavbarType, DEFAULT } from '../../actions/global-actions';
 
 import PostForm from '../../components/posts/PostForm';
 
 class CreatePost extends React.Component {
 
-    componentDidMount() {
+    componentWillMount() {
         this.props.dispatch(setDocumentTitle('Create Post'));
+        this.props.dispatch(setNavbarType(DEFAULT));
     }
 
     render() {

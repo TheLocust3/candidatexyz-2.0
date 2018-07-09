@@ -11,7 +11,7 @@ import Post from '../../components/posts/Post';
 
 const PREVIEW_BODY_LENGTH = 3000;
 
-class PostPreview extends React.Component {
+export default class PostPreview extends React.Component {
 
     componentDidMount() {
         objectFitImages();
@@ -53,5 +53,3 @@ class PostPreview extends React.Component {
 PostPreview.propTypes = {
     post: PropTypes.object.isRequired
 };
-
-export default PostPreview;

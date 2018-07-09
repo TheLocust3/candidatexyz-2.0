@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
 
-import { setDocumentTitle } from '../../actions/global-actions';
+import { setDocumentTitle, setNavbarType, DEFAULT } from '../../actions/global-actions';
 import { fetchPost } from '../../actions/post-actions';
 
 import PostForm from '../../components/posts/PostForm';
@@ -12,13 +12,12 @@ import PostForm from '../../components/posts/PostForm';
 class EditPost extends React.Component {
 
     componentWillMount() {
+        this.props.dispatch(setDocumentTitle('Edit Post'));
+        this.props.dispatch(setNavbarType(DEFAULT));
+
         if (_.isEmpty(this.findPost().url)) {
             this.props.dispatch(fetchPost(this.props.match.params.postType, this.props.match.params.url));
         }
-    }
-
-    componentDidMount() {
-        this.props.dispatch(setDocumentTitle('Edit Post'));
     }
 
     findPost() {

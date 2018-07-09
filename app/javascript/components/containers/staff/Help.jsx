@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Text, Button, MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
 
-import { setDocumentTitle } from '../../actions/global-actions';
+import { setDocumentTitle, setNavbarType, DEFAULT } from '../../actions/global-actions';
 
 import TextContent from '../content/TextContent';
 import ShowPost from '../posts/ShowPost';
@@ -16,9 +16,12 @@ class Help extends React.Component {
         this.state = { slideIndex: 0 };
     }
 
-    componentDidMount() {
+    componentWillMount() {
         this.props.dispatch(setDocumentTitle('Help'));
+        this.props.dispatch(setNavbarType(DEFAULT));
+    }
 
+    componentDidMount() {
         _.range(0, 7).map((index) => {
             $(`#slide${index}`).hide();
         });

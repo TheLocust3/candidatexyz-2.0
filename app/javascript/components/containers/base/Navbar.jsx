@@ -32,6 +32,8 @@ class Navbar extends React.Component {
     }
 
     updateTransparent(event) {
+        if (this.props.navbarType == DEFAULT) return;
+
         let currentY = $(window).scrollTop();
         if (this.props.navbarType != TRANSPARENT && currentY <= 0) {
             this.props.dispatch(setNavbarType(TRANSPARENT));
@@ -46,7 +48,7 @@ class Navbar extends React.Component {
         if (this.props.navbarType != TRANSPARENT || currentY <= 0) return;
     
         if (currentY - this.state.lastScrollY > 0) {
-            this.props.dispatch(setNavbarType(DEFAULT));
+            this.props.dispatch(setNavbarType(''));
         }
 
         this.setState({

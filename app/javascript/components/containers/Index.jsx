@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Text, MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
 
-import { setNavbarType, TRANSPARENT } from '../actions/global-actions';
+import { setDocumentTitle, setNavbarType, TRANSPARENT } from '../actions/global-actions';
 
 import TextContent from './content/TextContent';
 import Parallax from '../components/common/Parallax';
@@ -12,7 +12,8 @@ import DonateBox from '../components/DonateBox';
 
 class Index extends React.Component {
 
-    componentDidMount() {
+    componentWillMount() {
+        this.props.dispatch(setDocumentTitle('Home'));
         this.props.dispatch(setNavbarType(TRANSPARENT));
     }
 

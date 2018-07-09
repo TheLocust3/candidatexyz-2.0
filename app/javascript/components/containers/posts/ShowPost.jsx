@@ -6,8 +6,8 @@ import moment from 'moment';
 import { Text } from 'candidatexyz-common-js/lib/elements';
 
 import { history } from '../../../constants';
-import { fetchPost } from '../../actions/post-actions';
 import { setDocumentTitle } from '../../actions/global-actions';
+import { fetchPost } from '../../actions/post-actions';
 
 import Post from '../../components/posts/Post';
 

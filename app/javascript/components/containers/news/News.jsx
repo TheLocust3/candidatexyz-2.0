@@ -6,16 +6,17 @@ import moment from 'moment';
 import { UserActions } from 'candidatexyz-common-js';
 import { Text } from 'candidatexyz-common-js/lib/elements';
 
-import { setDocumentTitle } from '../../actions/global-actions';
+import { setDocumentTitle, setNavbarType, DEFAULT } from '../../actions/global-actions';
 import { fetchPostType } from '../../actions/post-actions';
 
 import TextContent from '../content/TextContent';
-import PostPreview from '../posts/PostPreview';
+import PostPreview from '../../components/posts/PostPreview';
 
 class News extends React.Component {
 
     componentWillMount() {
         this.props.dispatch(setDocumentTitle('News'));
+        this.props.dispatch(setNavbarType(DEFAULT));
 
         this.props.dispatch(UserActions.fetchCurrentUser());
         this.props.dispatch(fetchPostType('news'));
