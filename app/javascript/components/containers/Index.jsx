@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Text, MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
 
+import { setNavbarType, TRANSPARENT } from '../actions/global-actions';
+
 import TextContent from './content/TextContent';
 import Parallax from '../components/common/Parallax';
 import SocialMedia from '../components/common/SocialMedia';
@@ -9,6 +11,10 @@ import SlimContactForm from '../components/forms/SlimContactForm';
 import DonateBox from '../components/DonateBox';
 
 class Index extends React.Component {
+
+    componentDidMount() {
+        this.props.dispatch(setNavbarType(TRANSPARENT));
+    }
 
     render() {
         return (

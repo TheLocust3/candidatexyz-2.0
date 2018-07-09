@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { MDCTemporaryDrawer } from '@material/drawer';
 
 import { MAX_MOBILE_WIDTH } from '../../../constants';
+import { setNavbarType, TRANSPARENT, DEFAULT } from '../../actions/global-actions';
+
 import TextContent from '../content/TextContent';
 import ImageContent from '../content/ImageContent';
 import LinkContent from '../content/LinkContent';
@@ -15,7 +17,7 @@ class Navbar extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = { lastRenderedWidth: $(document).width() };
+        this.state = { lastRenderedWidth: $(document).width(), lastScrollY: 0 };
     }
 
     updateDimensions() {
@@ -29,8 +31,32 @@ class Navbar extends React.Component {
         }
     }
 
+    updateTransparent(event) {
+        let currentY = $(window).scrollTop();
+        if (this.props.navbarType != TRANSPARENT && currentY <= 0) {
+            this.props.dispatch(setNavbarType(TRANSPARENT));
+
+            this.setState({
+                lastScrollY: $(window).scrollTop()
+            });
+
+            return;
+        }
+
+        if (this.props.navbarType != TRANSPARENT || currentY <= 0) return;
+    
+        if (currentY - this.state.lastScrollY > 0) {
+            this.props.dispatch(setNavbarType(DEFAULT));
+        }
+
+        this.setState({
+            lastScrollY: $(window).scrollTop()
+        });
+    }
+
     componentDidMount() {
         window.addEventListener('resize', () => this.updateDimensions());
+        window.addEventListener('mousewheel', (event) => this.updateTransparent(event));
     }
 
     onMenuClick() {
@@ -45,10 +71,12 @@ class Navbar extends React.Component {
         drawer.open = false;
     }
 
-    renderDeskop() {        
+    renderDeskop() {
+        let transparentClassName = this.props.navbarType == TRANSPARENT ? 'navbar--transparent' : '';
+
         return (
             <div>
-                <header className='mdc-toolbar mdc-toolbar--fixed navbar'>
+                <header className={`mdc-toolbar mdc-toolbar--fixed navbar ${transparentClassName}`}>
                     <div className='mdc-toolbar__row'>
                         <section className='mdc-toolbar__section mdc-toolbar__section--align-start relative'>
                             <div style={{ marginLeft: '1vw' }}>
@@ -128,7 +156,7 @@ class Navbar extends React.Component {
 
 function mapStateToProps(state) {
     return {
-
+        navbarType: state.global.navbarType
     };
 }
 
