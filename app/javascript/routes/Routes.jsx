@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -10,16 +9,10 @@ import { fetchWebsiteTitle } from '../components/actions/global-actions';
 import Navbar from '../components/containers/base/Navbar';
 import Footer from '../components/containers/base/Footer';
 import AdminOverlay from '../components/containers/base/AdminOverlay';
+import ScrollToTop from './ScrollToTop';
 
 import RootRoutes from './RootRoutes';
 import StaffRoutes from './StaffRoutes';
-
-// Always start navigation at the top of the page
-const ScrollToTop = () => {
-    window.scrollTo(0, 0);
-
-    return null;
-};
 
 class Routes extends React.Component {
 

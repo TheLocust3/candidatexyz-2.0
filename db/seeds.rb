@@ -40,6 +40,18 @@ Content.create(content_type: 'link', identifier: 'donateButton4', content: { tex
 Content.create(content_type: 'link', identifier: 'donateButton5', content: { text: '$250', url: 'https://secure.actblue.com' })
 Content.create(content_type: 'link', identifier: 'donateButton6', content: { text: 'Other', url: 'https://secure.actblue.com' })
 
+Content.create(content_type: 'image', identifier: 'aboutPanelBackground', content: { image: 'https://static1.squarespace.com/static/598dd363a5790a4026dac8ab/t/59c33b9c18b27d0daca27f1e/1503727352927/unspecified-43.jpg?format=2500w' })
+Content.create(content_type: 'text', identifier: 'aboutPanelHeader', content: { text: 'About Candidate' })
+Content.create(content_type: 'richText', identifier: 'aboutPanelBlurb', content: { text: "
+<p>
+    Elizabeth Warren grew up in a family hanging on by their fingernails to their place in the middle class. As a law professor, she became one of the nation’s top experts on bankruptcy and the financial pressures facing working families.
+</p>
+
+<p>
+    After the 2008 financial crisis, Elizabeth fought to protect taxpayers and hold Wall Street accountable. She is widely credited with the creation of the Consumer Financial Protection Bureau – a new agency to get the tricks and traps out mortgages, credit cards, and other financial products.
+</p>
+" })
+
 # news
 Content.create(content_type: 'text', identifier: 'newsHeader', content: { text: 'News' })
 

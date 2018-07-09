@@ -21,18 +21,6 @@ export default class PostPreview extends React.Component {
         history.push(`/news/${this.props.post.url}`)
     }
 
-    renderCreatedAt() {
-        if (this.props.small) return;
-
-        return (
-            <div className='post-created-at'>
-                <Text type='body2'>
-                    {moment(this.props.post.createdAt).format('MMMM D, YYYY')}
-                </Text>
-            </div>
-        );
-    }
-
     render() {
         let { post, ...props } = this.props;
 

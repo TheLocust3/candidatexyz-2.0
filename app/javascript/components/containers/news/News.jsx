@@ -31,6 +31,7 @@ class News extends React.Component {
                     return (
                         <div key={index}>
                             <PostPreview key={index} post={post} />
+                            <br /><br />
                         </div>
                     );
                 })}

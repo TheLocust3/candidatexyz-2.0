@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Text } from 'candidatexyz-common-js/lib/elements';
 
+import { transparentNavbarManager } from '../../helpers';
 import { setDocumentTitle, setNavbarType, TRANSPARENT } from '../actions/global-actions';
 
 import TextContent from './content/TextContent';
@@ -12,6 +13,10 @@ class About extends React.Component {
     componentWillMount() {
         this.props.dispatch(setDocumentTitle('Meet'));
         this.props.dispatch(setNavbarType(TRANSPARENT));
+    }
+
+    componentDidUpdate() {
+        transparentNavbarManager(this.props);
     }
 
     render() {
