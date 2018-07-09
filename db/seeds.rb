@@ -3,6 +3,12 @@ Content.create(content_type: 'text', identifier: 'websiteTitle', content: { text
 
 Content.create(content_type: 'raw', identifier: 'voluneteerHelpOptions', content: 'Data Entry,Make Calls, Door-to-Door Canvassing,Share information and news on social media,Hold Signs/Standouts')
 
+# social media
+Content.create(content_type: 'link', identifier: 'facebook', content: { text: 'Facebook', url: 'http://www.facebook.com' })
+Content.create(content_type: 'link', identifier: 'twitter', content: { text: 'Twitter', url: 'http://www.twitter.com' })
+Content.create(content_type: 'link', identifier: 'instagram', content: { text: 'Instagram', url: 'http://www.instagram.com' })
+Content.create(content_type: 'link', identifier: 'youtube', content: { text: 'Youtube', url: 'http://www.youtube.com' })
+
 # help
 Content.create(content_type: 'text', identifier: 'helpSampleText', content: { text: 'Some sample text' })
 Post.create(post_type: 'help', url: 'help-sample-long', title: 'Sample Post', body: "
@@ -20,6 +26,19 @@ Content.create(content_type: 'link', identifier: 'navButton2', content: { text: 
 
 # footer
 Content.create(content_type: 'link', identifier: 'footerLink4', content: { text: 'Contact', url: '/contact' })
+
+# index
+Content.create(content_type: 'image', identifier: 'indexBackground', content: { image: 'https://static1.squarespace.com/static/598dd363a5790a4026dac8ab/t/59cd9e5032601e2e1011ec17/1506647684440/Seth-headshot-smile.jpg?format=2500w' })
+Content.create(content_type: 'text', identifier: 'indexHeaderBoxSignUp', content: { text: 'Sign Up For Updates' })
+Content.create(content_type: 'text', identifier: 'indexHeaderBoxFollow', content: { text: 'Follow Me' })
+Content.create(content_type: 'text', identifier: 'indexDonateBoxHeader', content: { text: 'Donate to Us.' })
+
+Content.create(content_type: 'link', identifier: 'donateButton1', content: { text: '$10', url: 'https://secure.actblue.com' })
+Content.create(content_type: 'link', identifier: 'donateButton2', content: { text: '$25', url: 'https://secure.actblue.com' })
+Content.create(content_type: 'link', identifier: 'donateButton3', content: { text: '$50', url: 'https://secure.actblue.com' })
+Content.create(content_type: 'link', identifier: 'donateButton4', content: { text: '$100', url: 'https://secure.actblue.com' })
+Content.create(content_type: 'link', identifier: 'donateButton5', content: { text: '$250', url: 'https://secure.actblue.com' })
+Content.create(content_type: 'link', identifier: 'donateButton6', content: { text: 'Other', url: 'https://secure.actblue.com' })
 
 # news
 Content.create(content_type: 'text', identifier: 'newsHeader', content: { text: 'News' })

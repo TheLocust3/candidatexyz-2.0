@@ -44,4 +44,8 @@ $mdc-theme-secondary: $primary;
     font-weight: 300;
 }
 
+.mdc-typography--subtitle1 {
+    font-size: 18px !important;
+}
+
 @import '@material/theme/mdc-theme';

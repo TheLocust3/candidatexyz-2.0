@@ -1,8 +1,5 @@
 @import 'global';
 
-$red-button: #E53935;
-$blue-button: #1E88E5;
-
 .mdc-toolbar {
     height: 70px;
 }
@@ -70,9 +67,9 @@ $blue-button: #1E88E5;
 }
 
 .navbar-button-red {
-    background-color: $red-button !important;
+    background-color: $donate-color !important;
 }
 
 .navbar-button-blue {
-    background-color: $blue-button !important;
+    background-color: $action-color !important;
 }

@@ -61,7 +61,7 @@ class ImageContentEditor extends React.Component {
                 <TextField label='Image URL' onChange={(event) => this.handleImageChange(event)} defaultValue={this.state.content.content.image} size={20} style={{ width: '100%' }} />
                 <TextField label='Replacement Text' onChange={(event) => this.handleTextChange(event)} defaultValue={this.state.content.content.text} size={20} style={{ width: '100%' }} />
 
-                <Button className='edit-content-button'>Save</Button>
+                <Button className='edit-content-button edit-raw-content-button'>Save</Button>
                 <ImageUploader className='edit-content-button' handleUpload={(url) => this.onUpload(url)} style={{ marginRight: '3%' }} />
             </Form>
         );
