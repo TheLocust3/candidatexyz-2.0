@@ -14,6 +14,7 @@ import DonateBox from '../components/DonateBox';
 import SlideshowPanel from '../components/panels/SlideshowPanel';
 import NewsPanel from '../components/panels/NewsPanel';
 import AboutPanel from '../components/panels/AboutPanel';
+import MobileDonatePanel from '../components/panels/MobileDonatePanel';
 
 class Index extends React.Component {
 
@@ -54,6 +55,7 @@ class Index extends React.Component {
                         </div>
                     </div>
                 </Parallax>
+                <MobileDonatePanel />
                 <br />
 
                 <SlideshowPanel />
