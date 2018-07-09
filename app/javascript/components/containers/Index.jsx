@@ -11,6 +11,7 @@ import Parallax from '../components/common/Parallax';
 import SocialMedia from '../components/common/SocialMedia';
 import SlimContactForm from '../components/forms/SlimContactForm';
 import DonateBox from '../components/DonateBox';
+import SlideshowPanel from '../components/panels/SlideshowPanel';
 import NewsPanel from '../components/panels/NewsPanel';
 import AboutPanel from '../components/panels/AboutPanel';
 
@@ -55,12 +56,15 @@ class Index extends React.Component {
                 </Parallax>
                 <br />
 
-                Hello World!
-                <br />
+                <SlideshowPanel />
                 
                 <NewsPanel posts={this.props.posts} />
 
                 <AboutPanel />
+
+                <center>
+                    <SocialMedia size={2} className='social-media-footer' iconClassName='social-media-footer-icon' />
+                </center>
 
                 <MDCAutoInit />
             </div>

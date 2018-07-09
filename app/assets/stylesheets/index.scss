@@ -141,3 +141,45 @@
 
     background: darken(white, 15%);
 }
+
+// social media styles
+.social-media-footer {
+    width: 250px;
+
+    margin-top: 20px;
+
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+
+    border-radius: 5px;
+    border: solid darken(white, 40%) 1px;
+}
+
+.social-media-footer-icon {
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    color: darken(white, 70%) !important;
+}
+
+.social-media-footer-icon:hover {
+    color: darken(white, 60%) !important;
+}
+
+// slideshow styles
+.slideshow-panel {
+    height: 70vh;
+}
+
+.slideshow-panel-blurb {
+    margin-top: 10vh;
+}
+
+.slideshow-link {
+    color: darken(white, 70%);
+    font-weight: 600;
+}
+
+.slideshow-link:hover {
+    color: darken(white, 50%);
+}

@@ -91,11 +91,9 @@ export default class Slideshow extends React.Component {
         );
     }
 
-    renderCircles() {
-        let fullscreenCircleClassName = _.isEmpty(this.props.children) ? 'slideshow-circle-holder-fullscreen' : '';
-        
+    renderCircles() {        
         return (
-            <div className={`slideshow-circle-holder ${fullscreenCircleClassName}`}>
+            <div className='slideshow-circle-holder'>
                 {this.props.images.map((image, index) => {
                     let activeClassName = this.state.index == index ? 'slideshow-circle-active' : '';
 
@@ -106,14 +104,12 @@ export default class Slideshow extends React.Component {
     }
 
     renderImages() {
-        let fullscreenImageClassName = _.isEmpty(this.props.children) ? 'slideshow-image-fullscreen' : '';
-
         return (
             <div style={{ display: 'inline' }}>
                 {this.props.images.map((image, index) => {
                     let imageClassName = index == this.state.index ? 'slideshow-image-active' : '';
 
-                    return <img key={index} id={`image-${index}`} data-object-fit='cover' src={image} className={`slideshow-image ${fullscreenImageClassName} ${imageClassName}`} />
+                    return <img key={index} id={`image-${index}`} data-object-fit='cover' src={image} className={`slideshow-image ${imageClassName}`} />
                 })}
 
                 {this.renderCircles()}
@@ -122,10 +118,8 @@ export default class Slideshow extends React.Component {
     }
 
     render() {
-        let fullscreenClassName = _.isEmpty(this.props.children) ? 'slideshow-fullscreen' : '';
-
         return (
-            <div className={`slideshow ${fullscreenClassName}`}>
+            <div className='slideshow'>
                 {this.renderImages()}
                 
                 {this.renderBlurb()}
