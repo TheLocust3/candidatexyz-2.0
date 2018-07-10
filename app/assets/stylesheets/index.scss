@@ -1,5 +1,13 @@
 @import 'global';
 
+.index-header {
+    height: 100vh;
+
+    @media (max-width: $mobile-width) {
+        height: 65vh;
+    }
+}
+
 // donate-box styles
 .donate-box {
     position: absolute;
@@ -20,17 +28,28 @@
     }
 }
 
-.donate-header {
-    position: absolute;
+.donate-box-mobile {
+    display: inline-block;
+    position: relative;
     top: 0;
-    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
 
+    border-radius: 0;
+}
+
+.donate-header {
     width: 100%;
     height: 40%;
 
     padding-left: 10%;
 
     background-color: $action-color;
+
+    @media (max-width: $mobile-width) {
+        height: 100px;
+    }
 }
 
 .donate-button {
@@ -109,6 +128,24 @@
 
 .header-social-media {
     padding-top: 1vh;
+
+    @media (max-width: $mobile-width) {
+        padding-bottom: 2vh;
+    }
+}
+
+// mobile header styles
+.mobile-contact-panel {
+    padding-left: 5%;
+    padding-right: 5%;
+
+    background-color: $primary-dark;
+}
+
+.mobile-contact-panel-button {
+    width: 100%;
+
+    background-color: $action-color !important;
 }
 
 // news panel styles
@@ -200,13 +237,17 @@
     height: 70vh;
 
     @media (max-width: $mobile-width) {
-        height: 100vh;
+        height: 90vh;
         text-align: center;
     }
 }
 
 .slideshow-panel-blurb {
     margin-top: 10vh;
+
+    @media (max-width: $mobile-width) {
+        margin-top: 0;
+    }
 }
 
 .slideshow-link {

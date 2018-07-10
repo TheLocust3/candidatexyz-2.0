@@ -8,8 +8,10 @@ import ButtonLinkContent from '../containers/content/ButtonLinkContent';
 export default class DonateBox extends React.Component {
 
     render() {
+        let mobileClassName = this.props.mobile ? 'donate-box-mobile' : '';
+
         return (
-            <div className='donate-box'>
+            <div className={`donate-box ${mobileClassName}`}>
                 <div className='donate-header relative'>
                     <Text type='headline4' className='header-text white middle'>
                         <TextContent className='upcase' identifier='indexDonateBoxHeader' />
@@ -48,4 +50,8 @@ export default class DonateBox extends React.Component {
             </div>
         );
     }
+}
+
+DonateBox.propTypes = {
+    mobile: PropTypes.bool
 }

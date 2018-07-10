@@ -34,7 +34,7 @@ class Index extends React.Component {
 
         return (
             <div className='content-bottom'>
-                <Parallax height='100vh' width='100vw' imageIdentifier='indexBackground'>
+                <Parallax className='index-header' width='100vw' imageIdentifier='indexBackground'>
                     <DonateBox />
 
                     <div className='header-box'>

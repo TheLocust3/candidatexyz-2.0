@@ -27,10 +27,12 @@ export default class CommonParallax extends React.Component {
     render() {
         let { image, imageIdentifier, height, width, children, ...props } = this.props;
 
-        height = _.isEmpty(height) ? '50vh' : height;
+        let style = {};
+        style = _.isEmpty(height) ? style : { height: height, ...style };
+        style = _.isEmpty(width) ? style : { width: width, ...style };
 
         return (
-            <Parallax strength={300} style={{ height: height, width: width }} bgStyle={{ width: '100%' }} {...props}>
+            <Parallax strength={300} style={style} bgStyle={{ width: '100%' }} {...props}>
                 <Background>
                     {this.renderImage()}
                     {this.renderImageContent()}

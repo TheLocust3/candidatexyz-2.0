@@ -34,7 +34,7 @@ export default class ContactForm extends React.Component {
         });
     }
 
-    render() {
+    renderDesktop() {
         return (
             <Form handleSubmit={(event) => this.handleSubmit(event)} errors={this.state.errors}>
                 <TextField label='Email' name='email' className='white' textFieldClassName='white header-text header-text-small' labelClassName='white header-text' onChange={(event) => this.handleChange(event)} style={{ width: '45%', marginRight: '2.5%' }} />
@@ -44,4 +44,27 @@ export default class ContactForm extends React.Component {
             </Form>
         );
     }
+
+    renderMobile() {
+        return (
+            <Form handleSubmit={(event) => this.handleSubmit(event)} errors={this.state.errors}>
+                <TextField label='Email' name='email' className='slim-textfield white' textFieldClassName='white header-text header-text-small' labelClassName='white header-text' onChange={(event) => this.handleChange(event)} style={{ width: '100%' }} />
+                <TextField label='Zipcode' name='zipCode' className='slim-textfield white' textFieldClassName='white header-text header-text-small' labelClassName='white header-text' onChange={(event) => this.handleChange(event)} style={{ width: '100%' }} />
+
+                <Button className='header-text mobile-contact-panel-button'>Submit</Button>
+            </Form>
+        );
+    }
+
+    render() {
+        if (this.props.mobile) {
+            return this.renderMobile();
+        } else {
+            return this.renderDesktop();
+        }
+    }
+}
+
+ContactForm.propTypes = {
+    mobile: PropTypes.bool
 }
