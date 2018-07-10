@@ -29,7 +29,7 @@ export default class NewsPanel extends React.Component {
                 {this.renderPostList()}
 
                 <center>
-                    <Link to='/news'><Button className='header-text'>READ MORE POSTS</Button></Link>
+                    <Link className='unstyled-link' to='/news'><Button className='header-text'>READ MORE POSTS</Button></Link>
                 </center>
 
                 <MDCAutoInit />

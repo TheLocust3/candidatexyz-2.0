@@ -20,7 +20,7 @@ export default class AboutPanel extends React.Component {
 
                                 <Text type='body2'><TextContent identifier='aboutPanelBlurb' /></Text>
 
-                                <Link to='/about'><Button className='about-box-button header-text'>Read More</Button></Link>
+                                <Link className='unstyled-link' to='/about'><Button className='about-box-button header-text'>Read More</Button></Link>
                             </div>
                         </div>
                     </div>
