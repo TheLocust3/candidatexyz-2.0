@@ -12,7 +12,7 @@ export default class NewsPanel extends React.Component {
     renderPostList() {
         return (
             <div>
-                {_.slice(this.props.posts, 0, 2).map((post) => {
+                {_.slice(_.reverse(_.sortBy(this.props.posts, (post) => { return post.createdAt })), 0, 2).map((post) => {
                     return (
                         <div key={post.id}>
                             <PostListThumbnail post={post} />

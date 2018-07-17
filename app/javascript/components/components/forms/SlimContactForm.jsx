@@ -26,7 +26,7 @@ export default class ContactForm extends React.Component {
     handleSubmit(event) {
         let contact = this.state.contact;
         ContactApi.create(contact.email, contact.zipCode).then(() => {
-            history.push('/');
+            window.location.reload();
         }).catch((response) => {
             this.setState({
                 errors: response.responseJSON.errors
