@@ -7,7 +7,7 @@ import { LOCAL } from './features';
 
 import { createBrowserHistory } from 'history/es';
 
-export const CAMPAIGN_NAME = 'Reading Democratic Committee'; // TODO: make this dynamic
+export const CAMPAIGN_NAME = 'John Doe for Representative'; // TODO: make this dynamic
 
 export let history = createBrowserHistory();
 export const store = createStore(reducer, applyMiddleware(thunkMiddleware));

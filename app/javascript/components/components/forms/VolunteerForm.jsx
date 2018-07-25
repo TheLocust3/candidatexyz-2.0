@@ -115,7 +115,8 @@ export default class VolunteerForm extends React.Component {
                 <TextField type='email' label='Email' name='email' onChange={(event) => this.handleChange(event)} required={true} style={{ width: '47.5%', marginRight: '5%' }} />
                 <TextField label='Phone Number' name='phoneNumber' onChange={(event) => this.handleChange(event)} style={{ width: '47.5%' }} />
 
-                {this.renderHelpOptionsDropdown()}<br />
+                <br /><br />
+                {this.renderHelpOptionsDropdown()}
                 {this.renderOtherHelp()}
 
                 <br />
