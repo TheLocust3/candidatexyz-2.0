@@ -40,7 +40,7 @@ export default class PostForm extends React.Component {
 
     handleSubmit(event) {
         if (_.isEmpty(this.props.post)) {
-            PostApi.create(this.state.post.postType, this.state.post.url, this.state.post.title, this.state.post.body, this.state.post.image).then(() => {
+            PostApi.create(this.state.post.postType, encodeURIComponent(this.state.post.title), this.state.post.title, this.state.post.body, this.state.post.image).then(() => {
                 history.push('/');
             }).catch((response) => {
                 this.setState({
@@ -84,15 +84,13 @@ export default class PostForm extends React.Component {
     render() {
         return (
             <Form handleSubmit={(event) => this.handleSubmit(event)} errors={this.state.errors} className='content content-15'>
-                <TextField label='Title' name='title' onChange={(event) => this.handleChange(event)} defaultValue={this.state.post.title} style={{ width: '100%' }} /><br />
-
-                <TextField label='Article URL' name='url' onChange={(event) => this.handleChange(event)} defaultValue={this.state.post.url} style={{ width: '100%' }} required />
-                <br /><br />
+                <TextField label='Title' name='title' onChange={(event) => this.handleChange(event)} defaultValue={this.state.post.title} style={{ width: '100%' }} /><br /><br />
 
                 <Text type='body1'>
                     <ImageUploader text='Upload Image' handleUpload={(url) => this.onUpload(url)} styleOuter={{ display: 'inline-block' }} />
                     <span style={{ marginLeft: '3%' }}>{this.state.post.image}</span>
                 </Text>
+                <br />
 
                 <TextEditor label='Body' content={this.state.post.body} onChange={(text) => { this.handleEditorChange(text) }} />
 

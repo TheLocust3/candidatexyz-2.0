@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import objectFitImages from 'object-fit-images';
 
 import { setNavbarType, DEFAULT } from '../../actions/global-actions';
-import { fetchPost } from '../../actions/post-actions';
 
 import ShowPost from '../posts/ShowPost';
 
@@ -12,8 +11,6 @@ class ShowIssue extends React.Component {
 
     componentWillMount() {
         this.props.dispatch(setNavbarType(DEFAULT));
-        
-        this.props.dispatch(fetchPost(this.props.postType, this.props.url));
     }
 
     componentDidMount() {
@@ -21,7 +18,7 @@ class ShowIssue extends React.Component {
     }
 
     findPost(postType, url) {
-        let post = _.find(this.props.posts, { postType: postType, url: url });
+        let post = _.find(this.props.posts, { postType: postType, url: encodeURIComponent(url) });
 
         if (_.isEmpty(post)) {
             return { }

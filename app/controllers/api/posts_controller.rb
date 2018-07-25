@@ -10,7 +10,7 @@ class Api::PostsController < Api::ApiController
     end
 
     def show
-        render :json => Post.where( :post_type => params[:post_type], :url => params[:url] ).first
+        render :json => Post.where( :post_type => params[:post_type], :url => ERB::Util.url_encode(params[:url]) ).first
     end
 
     def create

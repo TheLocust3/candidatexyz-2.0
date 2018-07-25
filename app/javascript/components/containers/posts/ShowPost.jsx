@@ -22,7 +22,7 @@ class ShowPost extends React.Component {
     }
 
     findPost(props) {
-        let post = _.find(props.posts, { postType: props.postType, url: props.url });
+        let post = _.find(props.posts, { postType: props.postType, url: encodeURIComponent(props.url) });
 
         if (_.isEmpty(post)) {
             return { }
