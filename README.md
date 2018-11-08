@@ -2,6 +2,8 @@
 
 The second MVP version of [candidateXYZ](https://candidatexyz.com). A fully customizable template for campaign websites. Integrated fully with the candidateXYZ app.
 
+![](https://s3.amazonaws.com/jakekinsella/candidatexyz-2.0.png)
+
 ## Local development
 
 Environment Variables
