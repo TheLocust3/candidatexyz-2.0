@@ -1,6 +1,7 @@
 # candidateXYZ
 
-The second MVP version of [candidateXYZ](https://candidatexyz.com). A fully customizable template for campaign websites. Integrated fully with the candidateXYZ app.
+The second MVP version of [candidateXYZ](https://candidatexyz.com). A fully customizable template for campaign websites. Integrated fully with the candidateXYZ app.  
+Check out the story [here](https://jakekinsella.com/projects/candidatexyz).
 
 ![](https://s3.amazonaws.com/jakekinsella/candidatexyz-2.0.png)
 
